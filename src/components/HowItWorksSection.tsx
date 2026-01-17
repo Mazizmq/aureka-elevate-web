@@ -14,7 +14,7 @@ export function HowItWorksSection() {
   return (
     <section id="how-it-works" className="section-padding relative overflow-hidden">
       {/* Background accent */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       
       <div className="container-wide">
         {/* Section Header */}
@@ -39,18 +39,18 @@ export function HowItWorksSection() {
               >
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
-                  <div className={`hidden lg:block absolute top-12 ${isRTL ? 'right-full' : 'left-full'} w-full h-px bg-gradient-to-r ${isRTL ? 'from-gold/20 to-transparent' : 'from-transparent to-gold/20'}`} />
+                  <div className={`hidden lg:block absolute top-12 ${isRTL ? 'right-full' : 'left-full'} w-full h-px bg-gradient-to-r ${isRTL ? 'from-primary/20 to-transparent' : 'from-transparent to-primary/20'}`} />
                 )}
                 
                 <div className="card-hover bg-card rounded-2xl p-8 border border-border h-full">
                   {/* Step Number */}
-                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-gold text-primary-foreground flex items-center justify-center font-bold text-sm shadow-gold">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm shadow-gold">
                     {isRTL ? steps.length - index : index + 1}
                   </div>
                   
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors duration-300">
-                    <Icon className="w-7 h-7 text-gold" />
+                  <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors duration-300">
+                    <Icon className="w-7 h-7 text-primary" />
                   </div>
                   
                   {/* Content */}

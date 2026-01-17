@@ -14,8 +14,8 @@ export function HumanGuidedSection() {
   return (
     <section id="human-guided" className="section-padding relative overflow-hidden bg-card/30">
       {/* Background accent */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
       
       <div className="container-wide">
         {/* Section Header */}
@@ -38,8 +38,8 @@ export function HumanGuidedSection() {
                 className="group card-hover bg-background rounded-2xl p-6 border border-border text-center"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors duration-300">
-                  <Icon className="w-7 h-7 text-gold" />
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
                 
                 {/* Content */}
@@ -56,7 +56,7 @@ export function HumanGuidedSection() {
 
         {/* Reassurance Quote */}
         <div className="mt-16 text-center">
-          <div className="inline-block bg-gradient-to-r from-gold/10 via-gold/5 to-gold/10 rounded-2xl px-8 py-6 border border-gold/20">
+          <div className="inline-block bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-2xl px-8 py-6 border border-primary/20">
             <p className={`text-lg md:text-xl font-display italic text-foreground ${isRTL ? 'font-arabic' : ''}`}>
               "{t('humanGuided.quote')}"
             </p>

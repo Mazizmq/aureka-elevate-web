@@ -13,10 +13,12 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
     'nav.howItWorks': 'How It Works',
+    'nav.humanGuided': 'Our Approach',
     'nav.services': 'Plans',
     'nav.labs': 'Coming Soon',
     'nav.login': 'Login',
     'nav.getStarted': 'Get Started Free',
+    'nav.theme': 'Theme',
     
     // Hero
     'hero.headline': 'Your Website.',
@@ -102,10 +104,12 @@ const translations: Record<Language, Record<string, string>> = {
   ar: {
     // Navigation
     'nav.howItWorks': 'كيف يعمل',
+    'nav.humanGuided': 'نهجنا',
     'nav.services': 'الباقات',
     'nav.labs': 'قريباً',
     'nav.login': 'تسجيل الدخول',
     'nav.getStarted': 'ابدأ مجاناً',
+    'nav.theme': 'المظهر',
     
     // Hero
     'hero.headline': 'موقعك.',
@@ -190,10 +194,12 @@ const translations: Record<Language, Record<string, string>> = {
   },
   de: {
     'nav.howItWorks': 'So funktioniert es',
+    'nav.humanGuided': 'Unser Ansatz',
     'nav.services': 'Pakete',
     'nav.labs': 'Demnächst',
     'nav.login': 'Anmelden',
     'nav.getStarted': 'Kostenlos starten',
+    'nav.theme': 'Design',
     'hero.headline': 'Ihre Website.',
     'hero.headlineAccent': 'Unsere Expertise.',
     'hero.subheadline': 'Wir erstellen schöne, professionelle Websites für Menschen, die sich nicht mit Technik beschäftigen möchten. Sie sprechen mit einem echten Menschen. Wir kümmern uns um alles andere — komplett kostenlos starten.',
@@ -264,10 +270,12 @@ const translations: Record<Language, Record<string, string>> = {
   },
   fr: {
     'nav.howItWorks': 'Comment ça marche',
+    'nav.humanGuided': 'Notre approche',
     'nav.services': 'Forfaits',
     'nav.labs': 'Bientôt',
     'nav.login': 'Connexion',
     'nav.getStarted': 'Commencer gratuitement',
+    'nav.theme': 'Thème',
     'hero.headline': 'Votre site web.',
     'hero.headlineAccent': 'Notre expertise.',
     'hero.subheadline': 'Nous créons de beaux sites professionnels pour les personnes qui ne veulent pas s\'occuper de la technologie. Vous parlez à une vraie personne. Nous gérons tout le reste — entièrement gratuit pour commencer.',
@@ -338,10 +346,12 @@ const translations: Record<Language, Record<string, string>> = {
   },
   es: {
     'nav.howItWorks': 'Cómo funciona',
+    'nav.humanGuided': 'Nuestro enfoque',
     'nav.services': 'Planes',
     'nav.labs': 'Próximamente',
     'nav.login': 'Iniciar sesión',
     'nav.getStarted': 'Empezar gratis',
+    'nav.theme': 'Tema',
     'hero.headline': 'Tu sitio web.',
     'hero.headlineAccent': 'Nuestra experiencia.',
     'hero.subheadline': 'Creamos sitios web hermosos y profesionales para personas que no quieren lidiar con la tecnología. Hablas con una persona real. Nosotros nos encargamos de todo lo demás — completamente gratis para empezar.',

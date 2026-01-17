@@ -9,14 +9,14 @@ export function CTASection() {
     <section className="section-padding relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-charcoal-light to-background" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted to-background" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       </div>
       
       {/* Decorative Elements */}
-      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-gold/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="container-narrow relative z-10 text-center">
         <h2 className={`font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 ${isRTL ? 'font-arabic' : ''}`}>
