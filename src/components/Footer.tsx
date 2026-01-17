@@ -17,8 +17,11 @@ export function Footer() {
                 Aureka<span className="text-gold">Web</span>
               </span>
             </a>
-            <p className={`text-muted-foreground max-w-xs ${isRTL ? 'font-arabic text-right' : ''}`}>
+            <p className={`text-muted-foreground max-w-xs mb-3 ${isRTL ? 'font-arabic text-right' : ''}`}>
               {t('footer.tagline')}
+            </p>
+            <p className={`text-sm text-muted-foreground/70 max-w-xs leading-relaxed ${isRTL ? 'font-arabic text-right' : ''}`}>
+              {t('footer.ideal')}
             </p>
           </div>
 

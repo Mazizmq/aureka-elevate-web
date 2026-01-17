@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -26,9 +26,9 @@ export function HeroSection() {
         <div className="stagger-children">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border mb-8">
-            <Sparkles className="w-4 h-4 text-gold" />
-            <span className="text-sm text-muted-foreground">
-              A service of Aureka Solutions
+            <Heart className="w-4 h-4 text-gold" />
+            <span className={`text-sm text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>
+              {t('hero.badge')}
             </span>
           </div>
 
@@ -54,6 +54,11 @@ export function HeroSection() {
               {t('hero.cta.secondary')}
             </Button>
           </div>
+
+          {/* Trust Indicator */}
+          <p className={`mt-8 text-sm text-muted-foreground/70 ${isRTL ? 'font-arabic' : ''}`}>
+            ✓ No credit card required • ✓ Real human support • ✓ Free forever option
+          </p>
         </div>
 
         {/* Scroll Indicator */}
