@@ -24,7 +24,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="section-padding relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-charcoal-light/50 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/50 to-background" />
       
       <div className="container-wide relative z-10">
         {/* Section Header */}
@@ -55,7 +55,7 @@ export function ServicesSection() {
               {freeFeatures.map((feature, index) => (
                 <li key={index} className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <div className="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                    <Check className="w-3 h-3 text-gold" />
+                    <Check className="w-3 h-3 text-primary" />
                   </div>
                   <span className={`text-muted-foreground ${isRTL ? 'font-arabic' : ''}`}>{feature}</span>
                 </li>
@@ -68,9 +68,9 @@ export function ServicesSection() {
           </div>
 
           {/* Concierge Tier */}
-          <div className="relative card-hover bg-gradient-card rounded-3xl p-8 border-2 border-gold/30 flex flex-col">
+          <div className="relative card-hover bg-gradient-card rounded-3xl p-8 border-2 border-primary/30 flex flex-col">
             {/* Popular Badge */}
-            <div className={`absolute -top-4 ${isRTL ? 'left-8' : 'right-8'} flex items-center gap-2 bg-gold text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold shadow-gold`}>
+            <div className={`absolute -top-4 ${isRTL ? 'left-8' : 'right-8'} flex items-center gap-2 bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold shadow-gold`}>
               <Crown className="w-4 h-4" />
               Popular
             </div>
@@ -90,8 +90,8 @@ export function ServicesSection() {
             <ul className={`space-y-4 mb-8 flex-grow ${isRTL ? 'text-right' : ''}`}>
               {conciergeFeatures.map((feature, index) => (
                 <li key={index} className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <div className="w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
-                    <Check className="w-3 h-3 text-gold" />
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-primary" />
                   </div>
                   <span className={`text-foreground ${isRTL ? 'font-arabic' : ''}`}>{feature}</span>
                 </li>
