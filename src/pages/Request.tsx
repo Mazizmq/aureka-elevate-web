@@ -62,11 +62,11 @@ export default function Request() {
   
   const savedIdea = sessionStorage.getItem('websiteIdea') || '';
   
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Omit<FormData, 'consent'> & { consent: boolean }>({
     fullName: '',
     email: '',
     phone: '',
-    entityType: 'individual' as 'individual' | 'business' | 'ngo',
+    entityType: 'individual' as const,
     websiteGoal: '',
     preferredLanguage: language,
     stylePreference: '',
@@ -81,7 +81,7 @@ export default function Request() {
     });
   }, []);
 
-  const updateField = <K extends keyof FormData>(field: K, value: FormData[K]) => {
+  const updateField = <K extends keyof typeof formData>(field: K, value: (typeof formData)[K]) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     setErrors(prev => ({ ...prev, [field]: undefined }));
   };
