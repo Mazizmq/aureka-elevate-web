@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Request from "./pages/Request";
 import HowItWorks from "./pages/HowItWorks";
 import SLA from "./pages/SLA";
+import Plans from "./pages/Plans";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/request" element={<Request />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/sla" element={<SLA />} />
+              <Route path="/plans" element={<Plans />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
