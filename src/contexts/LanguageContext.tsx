@@ -14,12 +14,23 @@ const translations: Record<Language, Record<string, string>> = {
     // Navigation
     'nav.howItWorks': 'How It Works',
     'nav.humanGuided': 'Our Approach',
-    'nav.services': 'Plans',
+    'nav.services': 'Services',
+    'nav.plans': 'Pricing',
     'nav.labs': 'Coming Soon',
-    'nav.login': 'Login',
-    'nav.getStarted': 'Get Started Free',
+    'nav.login': 'Sign In',
+    'nav.getStarted': 'Get Started',
     'nav.theme': 'Theme',
     'nav.sla': 'Service Agreement',
+
+    // Minimal Hero - Rotating Placeholders
+    'hero.placeholder.idea': 'I have an idea and don\'t know where to start…',
+    'hero.placeholder.business': 'I want to build a business, not just a website.',
+    'hero.placeholder.broken': 'Something in my operations feels broken.',
+    'hero.placeholder.system': 'I need a system, not another tool.',
+    'hero.placeholder.improve': 'I want to improve what I already have.',
+    'hero.placeholder.chaos': 'Help me turn chaos into clarity.',
+    'hero.humanSignal': 'Real humans. Step by step. No automation traps.',
+    'hero.humanOnline': 'Human support is always on',
     
     // Hero
     'hero.headline': 'Your Website.',
@@ -379,14 +390,25 @@ const translations: Record<Language, Record<string, string>> = {
     // Navigation
     'nav.howItWorks': 'كيف يعمل',
     'nav.humanGuided': 'نهجنا',
-    'nav.services': 'الباقات',
+    'nav.services': 'الخدمات',
+    'nav.plans': 'الأسعار',
     'nav.labs': 'قريباً',
     'nav.login': 'تسجيل الدخول',
-    'nav.getStarted': 'ابدأ مجاناً',
+    'nav.getStarted': 'ابدأ الآن',
     'nav.theme': 'المظهر',
     'nav.sla': 'اتفاقية الخدمة',
-    
-    // Hero
+
+    // Minimal Hero - Rotating Placeholders
+    'hero.placeholder.idea': 'لدي فكرة ولا أعرف من أين أبدأ…',
+    'hero.placeholder.business': 'أريد بناء عمل، وليس مجرد موقع.',
+    'hero.placeholder.broken': 'شيء ما في عملياتي يبدو معطلاً.',
+    'hero.placeholder.system': 'أحتاج نظاماً، وليس أداة أخرى.',
+    'hero.placeholder.improve': 'أريد تحسين ما لدي بالفعل.',
+    'hero.placeholder.chaos': 'ساعدني في تحويل الفوضى إلى وضوح.',
+    'hero.humanSignal': 'بشر حقيقيون. خطوة بخطوة. بدون فخاخ الأتمتة.',
+    'hero.humanOnline': 'الدعم البشري متاح دائماً',
+
+    // Hero (legacy)
     'hero.headline': 'موقعك.',
     'hero.headlineAccent': 'خبرتنا.',
     'hero.subheadline': 'نبني مواقع احترافية وجميلة للأشخاص الذين لا يريدون التعامل مع التقنية. تتحدث مع شخص حقيقي. نحن نتولى كل شيء آخر — البداية مجانية تماماً.',
@@ -731,12 +753,24 @@ const translations: Record<Language, Record<string, string>> = {
   de: {
     'nav.howItWorks': 'So funktioniert es',
     'nav.humanGuided': 'Unser Ansatz',
-    'nav.services': 'Pakete',
+    'nav.services': 'Dienste',
+    'nav.plans': 'Preise',
     'nav.labs': 'Demnächst',
     'nav.login': 'Anmelden',
-    'nav.getStarted': 'Kostenlos starten',
+    'nav.getStarted': 'Loslegen',
     'nav.theme': 'Design',
     'nav.sla': 'Servicevereinbarung',
+
+    // Minimal Hero - Rotating Placeholders
+    'hero.placeholder.idea': 'Ich habe eine Idee und weiß nicht, wo ich anfangen soll…',
+    'hero.placeholder.business': 'Ich möchte ein Geschäft aufbauen, nicht nur eine Website.',
+    'hero.placeholder.broken': 'Etwas in meinen Abläufen fühlt sich kaputt an.',
+    'hero.placeholder.system': 'Ich brauche ein System, nicht noch ein Tool.',
+    'hero.placeholder.improve': 'Ich möchte verbessern, was ich bereits habe.',
+    'hero.placeholder.chaos': 'Hilf mir, Chaos in Klarheit zu verwandeln.',
+    'hero.humanSignal': 'Echte Menschen. Schritt für Schritt. Keine Automatisierungsfallen.',
+    'hero.humanOnline': 'Menschlicher Support ist immer verfügbar',
+
     'hero.headline': 'Ihre Website.',
     'hero.headlineAccent': 'Unsere Expertise.',
     'hero.subheadline': 'Wir erstellen schöne, professionelle Websites für Menschen, die sich nicht mit Technik beschäftigen möchten. Sie sprechen mit einem echten Menschen. Wir kümmern uns um alles andere — komplett kostenlos starten.',
@@ -1056,12 +1090,24 @@ const translations: Record<Language, Record<string, string>> = {
   fr: {
     'nav.howItWorks': 'Comment ça marche',
     'nav.humanGuided': 'Notre approche',
-    'nav.services': 'Forfaits',
+    'nav.services': 'Services',
+    'nav.plans': 'Tarifs',
     'nav.labs': 'Bientôt',
     'nav.login': 'Connexion',
-    'nav.getStarted': 'Commencer gratuitement',
+    'nav.getStarted': 'Commencer',
     'nav.theme': 'Thème',
     'nav.sla': 'Accord de service',
+
+    // Minimal Hero - Rotating Placeholders
+    'hero.placeholder.idea': 'J\'ai une idée et je ne sais pas par où commencer…',
+    'hero.placeholder.business': 'Je veux construire une entreprise, pas juste un site web.',
+    'hero.placeholder.broken': 'Quelque chose dans mes opérations semble cassé.',
+    'hero.placeholder.system': 'J\'ai besoin d\'un système, pas d\'un autre outil.',
+    'hero.placeholder.improve': 'Je veux améliorer ce que j\'ai déjà.',
+    'hero.placeholder.chaos': 'Aidez-moi à transformer le chaos en clarté.',
+    'hero.humanSignal': 'De vrais humains. Étape par étape. Sans pièges d\'automatisation.',
+    'hero.humanOnline': 'Le support humain est toujours disponible',
+
     'hero.headline': 'Votre site web.',
     'hero.headlineAccent': 'Notre expertise.',
     'hero.subheadline': 'Nous créons de beaux sites professionnels pour les personnes qui ne veulent pas s\'occuper de la technologie. Vous parlez à une vraie personne. Nous gérons tout le reste — entièrement gratuit pour commencer.',
@@ -1381,12 +1427,24 @@ const translations: Record<Language, Record<string, string>> = {
   es: {
     'nav.howItWorks': 'Cómo funciona',
     'nav.humanGuided': 'Nuestro enfoque',
-    'nav.services': 'Planes',
+    'nav.services': 'Servicios',
+    'nav.plans': 'Precios',
     'nav.labs': 'Próximamente',
     'nav.login': 'Iniciar sesión',
-    'nav.getStarted': 'Empezar gratis',
+    'nav.getStarted': 'Empezar',
     'nav.theme': 'Tema',
     'nav.sla': 'Acuerdo de servicio',
+
+    // Minimal Hero - Rotating Placeholders
+    'hero.placeholder.idea': 'Tengo una idea y no sé por dónde empezar…',
+    'hero.placeholder.business': 'Quiero construir un negocio, no solo un sitio web.',
+    'hero.placeholder.broken': 'Algo en mis operaciones se siente roto.',
+    'hero.placeholder.system': 'Necesito un sistema, no otra herramienta.',
+    'hero.placeholder.improve': 'Quiero mejorar lo que ya tengo.',
+    'hero.placeholder.chaos': 'Ayúdame a convertir el caos en claridad.',
+    'hero.humanSignal': 'Humanos reales. Paso a paso. Sin trampas de automatización.',
+    'hero.humanOnline': 'El soporte humano está siempre disponible',
+
     'hero.headline': 'Tu sitio web.',
     'hero.headlineAccent': 'Nuestra experiencia.',
     'hero.subheadline': 'Creamos sitios web hermosos y profesionales para personas que no quieren lidiar con la tecnología. Hablas con una persona real. Nosotros nos encargamos de todo lo demás — completamente gratis para empezar.',

@@ -1,102 +1,105 @@
-import { useState, useEffect } from 'react';
-
-export type Currency = 'USD' | 'EUR' | 'SAR' | 'EGP';
+import { useCurrencyContext, Currency } from '@/contexts/CurrencyContext';
 
 interface CurrencyData {
   symbol: string;
-  rate: number;
   code: Currency;
 }
 
-const currencies: Record<Currency, CurrencyData> = {
-  USD: { symbol: '$', rate: 1, code: 'USD' },
-  EUR: { symbol: '€', rate: 0.92, code: 'EUR' },
-  SAR: { symbol: 'SAR', rate: 3.75, code: 'SAR' },
-  EGP: { symbol: 'EGP', rate: 50.85, code: 'EGP' },
+const currencyInfo: Record<Currency, CurrencyData> = {
+  USD: { symbol: '$', code: 'USD' },
+  EUR: { symbol: '€', code: 'EUR' },
+  SAR: { symbol: 'SAR', code: 'SAR' },
+  EGP: { symbol: 'EGP', code: 'EGP' },
 };
 
-// Map country codes to currencies
-const countryToCurrency: Record<string, Currency> = {
-  US: 'USD',
-  DE: 'EUR',
-  FR: 'EUR',
-  ES: 'EUR',
-  IT: 'EUR',
-  NL: 'EUR',
-  BE: 'EUR',
-  AT: 'EUR',
-  SA: 'SAR',
-  AE: 'SAR',
-  KW: 'SAR',
-  QA: 'SAR',
-  BH: 'SAR',
-  OM: 'SAR',
-  EG: 'EGP',
+// Fixed price mappings per currency (NOT dynamic conversion)
+// These are pre-set prices for each market
+const priceTable: Record<Currency, Record<number, number>> = {
+  USD: {
+    0: 0,
+    15: 15,
+    20: 20,
+    25: 25,
+    30: 30,
+    40: 40,
+    49: 49,
+    50: 50,
+    99: 99,
+    149: 149,
+    490: 490,
+    1390: 1390,
+  },
+  EUR: {
+    0: 0,
+    15: 14,
+    20: 18,
+    25: 23,
+    30: 28,
+    40: 37,
+    49: 45,
+    50: 46,
+    99: 89,
+    149: 139,
+    490: 450,
+    1390: 1290,
+  },
+  SAR: {
+    0: 0,
+    15: 55,
+    20: 75,
+    25: 95,
+    30: 110,
+    40: 150,
+    49: 185,
+    50: 190,
+    99: 370,
+    149: 560,
+    490: 1840,
+    1390: 5200,
+  },
+  EGP: {
+    0: 0,
+    15: 750,
+    20: 1000,
+    25: 1250,
+    30: 1500,
+    40: 2000,
+    49: 2450,
+    50: 2500,
+    99: 4950,
+    149: 7450,
+    490: 24500,
+    1390: 69500,
+  },
 };
+
+export type { Currency };
 
 export function useCurrency() {
-  const [currency, setCurrency] = useState<Currency>('USD');
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const detectCurrency = async () => {
-      try {
-        // Try to detect from IP
-        const response = await fetch('https://ipapi.co/json/', { 
-          signal: AbortSignal.timeout(3000) 
-        });
-        const data = await response.json();
-        const countryCode = data.country_code;
-        
-        if (countryCode && countryToCurrency[countryCode]) {
-          setCurrency(countryToCurrency[countryCode]);
-        }
-      } catch (error) {
-        // Default to USD if detection fails
-        console.log('Currency detection failed, defaulting to USD');
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    // Check for saved preference first
-    const saved = localStorage.getItem('aureka-currency') as Currency;
-    if (saved && currencies[saved]) {
-      setCurrency(saved);
-      setIsLoading(false);
-    } else {
-      detectCurrency();
-    }
-  }, []);
-
-  const changeCurrency = (newCurrency: Currency) => {
-    setCurrency(newCurrency);
-    localStorage.setItem('aureka-currency', newCurrency);
-  };
+  const { currency, setCurrency, isLoading } = useCurrencyContext();
 
   const formatPrice = (usdPrice: number): string => {
-    const converted = usdPrice * currencies[currency].rate;
-    const symbol = currencies[currency].symbol;
+    // Look up the fixed price for this currency
+    const localPrice = priceTable[currency][usdPrice] ?? Math.round(usdPrice * (currency === 'EGP' ? 50 : currency === 'SAR' ? 3.75 : currency === 'EUR' ? 0.92 : 1));
+    const { symbol } = currencyInfo[currency];
     
-    // Format based on currency
     if (currency === 'EGP' || currency === 'SAR') {
-      return `${Math.round(converted)} ${symbol}`;
+      return `${localPrice.toLocaleString()} ${symbol}`;
     }
     
-    return `${symbol}${converted.toFixed(converted % 1 === 0 ? 0 : 2)}`;
+    return `${symbol}${localPrice}`;
   };
 
-  const formatYearlyPrice = (monthlyUsdPrice: number, monthsToSave: number = 0): string => {
-    const yearlyPrice = monthlyUsdPrice * 12 - (monthlyUsdPrice * monthsToSave);
-    return formatPrice(yearlyPrice);
+  const formatYearlyPrice = (yearlyUsdPrice: number): string => {
+    return formatPrice(yearlyUsdPrice);
   };
 
   return {
     currency,
-    setCurrency: changeCurrency,
+    setCurrency,
     formatPrice,
     formatYearlyPrice,
-    currencies: Object.values(currencies),
+    currencies: Object.values(currencyInfo),
     isLoading,
   };
 }
