@@ -5,20 +5,19 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export function ServicesSection() {
   const { t, isRTL } = useLanguage();
 
-  const freeFeatures = [
-    t('services.free.feature1'),
-    t('services.free.feature2'),
-    t('services.free.feature3'),
-    t('services.free.feature4'),
-    t('services.free.feature5'),
+  const starterFeatures = [
+    t('services.starter.feature1'),
+    t('services.starter.feature2'),
+    t('services.starter.feature3'),
+    t('services.starter.feature4'),
   ];
 
-  const conciergeFeatures = [
-    t('services.concierge.feature1'),
-    t('services.concierge.feature2'),
-    t('services.concierge.feature3'),
-    t('services.concierge.feature4'),
-    t('services.concierge.feature5'),
+  const proFeatures = [
+    t('services.pro.feature1'),
+    t('services.pro.feature2'),
+    t('services.pro.feature3'),
+    t('services.pro.feature4'),
+    t('services.pro.feature5'),
   ];
 
   return (
@@ -39,20 +38,20 @@ export function ServicesSection() {
 
         {/* Pricing Cards */}
         <div className={`grid md:grid-cols-2 gap-8 max-w-4xl mx-auto ${isRTL ? 'direction-rtl' : ''}`}>
-          {/* Free Tier */}
+          {/* Starter Tier */}
           <div className="card-hover bg-card rounded-3xl p-8 border border-border flex flex-col">
             <div className={`mb-8 ${isRTL ? 'text-right' : ''}`}>
               <h3 className={`font-display text-2xl font-semibold mb-2 ${isRTL ? 'font-arabic' : ''}`}>
-                {t('services.free.title')}
+                {t('services.starter.title')}
               </h3>
               <div className="flex items-baseline gap-1">
-                <span className="font-display text-5xl font-bold">{t('services.free.price')}</span>
-                <span className="text-muted-foreground">{t('services.free.period')}</span>
+                <span className="font-display text-5xl font-bold">$0.99</span>
+                <span className="text-muted-foreground">{t('services.starter.period')}</span>
               </div>
             </div>
 
             <ul className={`space-y-4 mb-8 flex-grow ${isRTL ? 'text-right' : ''}`}>
-              {freeFeatures.map((feature, index) => (
+              {starterFeatures.map((feature, index) => (
                 <li key={index} className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <div className="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-primary" />
@@ -63,32 +62,32 @@ export function ServicesSection() {
             </ul>
 
             <Button variant="premium" size="xl" className="w-full">
-              {t('services.free.cta')}
+              {t('services.starter.cta')}
             </Button>
           </div>
 
-          {/* Concierge Tier */}
+          {/* Pro Tier */}
           <div className="relative card-hover bg-gradient-card rounded-3xl p-8 border-2 border-primary/30 flex flex-col">
             {/* Popular Badge */}
             <div className={`absolute -top-4 ${isRTL ? 'left-8' : 'right-8'} flex items-center gap-2 bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold shadow-gold`}>
               <Crown className="w-4 h-4" />
-              Popular
+              {t('services.popular')}
             </div>
 
             <div className={`mb-8 ${isRTL ? 'text-right' : ''}`}>
               <h3 className={`font-display text-2xl font-semibold mb-2 ${isRTL ? 'font-arabic' : ''}`}>
-                {t('services.concierge.title')}
+                {t('services.pro.title')}
               </h3>
               <div className="flex items-baseline gap-1">
                 <span className="font-display text-5xl font-bold text-gradient-gold">
-                  {t('services.concierge.price')}
+                  $4.99
                 </span>
-                <span className="text-muted-foreground">{t('services.concierge.period')}</span>
+                <span className="text-muted-foreground">{t('services.pro.period')}</span>
               </div>
             </div>
 
             <ul className={`space-y-4 mb-8 flex-grow ${isRTL ? 'text-right' : ''}`}>
-              {conciergeFeatures.map((feature, index) => (
+              {proFeatures.map((feature, index) => (
                 <li key={index} className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-primary" />
@@ -99,7 +98,7 @@ export function ServicesSection() {
             </ul>
 
             <Button variant="hero" size="xl" className="w-full">
-              {t('services.concierge.cta')}
+              {t('services.pro.cta')}
             </Button>
           </div>
         </div>
